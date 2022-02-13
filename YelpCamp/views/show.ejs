@@ -1,0 +1,9 @@
+<%- include('partials/header.ejs') -%>
+<h1><%= campground.name %></h1>
+<img src="<%= campground.link %>" class="img-fluid" alt="campground image">
+<p><%= campground.desc %></p>
+<form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+    <a href="/campgrounds/<%= campground._id %>/edit" class="btn btn-outline-warning">Edit</a>
+    <input type="submit" class="btn btn-outline-danger" value="Delete">
+</form>
+<%- include('partials/footer.ejs') -%>

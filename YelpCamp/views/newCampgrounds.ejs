@@ -1,0 +1,13 @@
+<%- include('partials/header'); -%>
+
+<div class="d-flex flex-column align-items-center justify-content-center my-2">
+    <h2>Create a new Campground</h2>
+    <form action="/campgrounds" method="POST">
+        <input type="text" class="form-control my-2" name="name" placeholder="Enter name of the place">
+        <input type="text" class="form-control my-2" name="link" placeholder="Enter the link of the image">
+        <input type="text" class="form-control my-2" name="desc" placeholder="Enter the Description">
+        <input type="submit" class="btn btn-primary w-100" value="Submit!">
+    </form>
+    <a href="/campgrounds">Go Back</a>
+</div>
+<%- include('partials/footer'); -%>

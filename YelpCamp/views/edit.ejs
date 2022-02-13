@@ -1,0 +1,13 @@
+<%- include('partials/header'); -%>
+
+<div class="d-flex flex-column align-items-center justify-content-center my-2">
+    <h2>Edit Campground <%= campground.name %></h2>
+    <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
+        <input type="text" class="form-control my-2" name="name" value="<%= campground.name %>">
+        <input type="text" class="form-control my-2" name="link" value="<%= campground.link %>">
+        <input type="text" class="form-control my-2" name="desc" value="<%= campground.desc %>">
+        <input type="submit" class="btn btn-primary w-100" value="Submit!">
+    </form>
+    <a href="/campgrounds">Go Back</a>
+</div>
+<%- include('partials/footer'); -%>
